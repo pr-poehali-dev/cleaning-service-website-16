@@ -6,7 +6,7 @@ const KITCHEN_IMG = "https://cdn.poehali.dev/projects/b6f50fb5-14c0-4e83-aefb-9f
 const PORTFOLIO_IMG = "https://cdn.poehali.dev/projects/b6f50fb5-14c0-4e83-aefb-9f6648c3aa03/files/11793cf8-ef61-47e6-b3f9-7690644fb8a0.jpg";
 
 const services = [
-  { icon: "Home", title: "Уборка квартир", desc: "Генеральная и поддерживающая уборка жилых помещений любой площади", price: "от 2 500 ₽" },
+  { icon: "Home", title: "Уборка квартир", desc: "Генеральная и поддерживающая уборка жилых помещений любой площади", price: "от 150 ₽/м²" },
   { icon: "Building2", title: "Офисы и бизнес", desc: "Ежедневная и разовая уборка офисов, торговых и бизнес-центров", price: "от 4 000 ₽" },
   { icon: "Sparkles", title: "После ремонта", desc: "Удаление строительной пыли, мусора, следов краски и штукатурки", price: "от 5 500 ₽" },
   { icon: "Droplets", title: "Мойка окон", desc: "Профессиональная мойка окон, витрин, фасадов с подъёмного оборудования", price: "от 800 ₽" },
