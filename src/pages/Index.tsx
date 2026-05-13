@@ -362,45 +362,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ОТЗЫВЫ */}
-      <section id="reviews" className="py-24 bg-gradient-to-br from-[#141d26] to-[#1a2a3a]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="text-[#00c9a7] font-bold text-sm uppercase tracking-widest mb-3">Говорят клиенты</div>
-            <h2 className="font-black text-4xl md:text-5xl text-white">
-              Отзывы о <span className="font-cormorant italic font-light text-[#00c9a7]">нас</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((r, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-colors">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: r.stars }).map((_, j) => (
-                    <Icon key={j} name="Star" size={16} className="text-[#00c9a7] fill-[#00c9a7]" />
-                  ))}
-                </div>
-                <p className="text-white/80 leading-relaxed mb-6 text-sm">"{r.text}"</p>
-                <div>
-                  <div className="font-bold text-white">{r.name}</div>
-                  <div className="text-white/40 text-xs">{r.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <button
-              onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#00c9a7] to-[#0097e6] text-white font-bold px-10 py-4 rounded-full text-base hover:opacity-90 transition-all hover:scale-105 shadow-2xl"
-            >
-              <Icon name="Phone" size={18} />
-              Записаться на уборку
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* КОНТАКТЫ */}
       <section id="contacts" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
