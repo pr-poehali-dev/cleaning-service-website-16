@@ -375,7 +375,7 @@ export default function Index() {
             </div>
             <span className="font-black text-white">Чисто<span className="text-[#00c9a7]">Дом</span></span>
           </div>
-          <div>© 2024 ЧистоДом. Профессиональный клининг в Брянске</div>
+          <div>© 2026 ЧистоДом. Профессиональный клининг в Брянске</div>
           <div>
             <span className="hover:text-white cursor-pointer transition-colors">Политика конфиденциальности</span>
           </div>
