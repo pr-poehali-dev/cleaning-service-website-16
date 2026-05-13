@@ -73,7 +73,7 @@ export default function Index() {
           </div>
 
           <nav className="hidden md:flex items-center gap-1">
-            {[["about","О нас"],["services","Услуги"],["portfolio","Портфолио"],["reviews","Отзывы"],["contacts","Контакты"]].map(([id,label]) => (
+            {[["about","О нас"],["services","Услуги"],["loyalty","Скидки"],["portfolio","Портфолио"],["reviews","Отзывы"],["contacts","Контакты"]].map(([id,label]) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
@@ -99,7 +99,7 @@ export default function Index() {
 
         {menuOpen && (
           <div className="md:hidden bg-white border-t px-6 py-4 flex flex-col gap-2 text-sm font-semibold text-[#4a5568]">
-            {[["about","О нас"],["services","Услуги"],["portfolio","Портфолио"],["reviews","Отзывы"],["contacts","Контакты"]].map(([id,label]) => (
+            {[["about","О нас"],["services","Услуги"],["loyalty","Скидки"],["portfolio","Портфолио"],["reviews","Отзывы"],["contacts","Контакты"]].map(([id,label]) => (
               <button key={id} onClick={() => scrollTo(id)} className="text-left px-3 py-2 rounded-xl hover:bg-[#00c9a7]/10 hover:text-[#00c9a7] transition-colors">{label}</button>
             ))}
             <button onClick={() => { setModalOpen(true); setMenuOpen(false); }} className="mt-2 bg-gradient-to-r from-[#00c9a7] to-[#0097e6] text-white font-bold px-5 py-3 rounded-full">
@@ -259,8 +259,86 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ПРОГРАММА ЛОЯЛЬНОСТИ */}
+      <section id="loyalty" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="text-[#00c9a7] font-bold text-sm uppercase tracking-widest mb-3">Выгодно с нами</div>
+            <h2 className="font-black text-4xl md:text-5xl">
+              Программа <span className="font-cormorant italic font-light text-[#0097e6]">лояльности</span>
+            </h2>
+            <p className="text-gray-500 mt-4 text-lg max-w-xl mx-auto">Чем больше заказываете — тем больше экономите. Скидки суммируются!</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+            {/* Реферальная программа */}
+            <div className="bg-gradient-to-br from-[#00c9a7]/10 to-[#0097e6]/10 border border-[#00c9a7]/30 rounded-3xl p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#00c9a7] to-[#0097e6] rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="Users" size={26} className="text-white" />
+                </div>
+                <div>
+                  <div className="font-black text-xl">Приведи друга</div>
+                  <div className="text-[#00c9a7] font-bold text-sm">Скидка за каждого</div>
+                </div>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Порекомендуйте нас другу — и получите <span className="font-black text-[#00c9a7]">скидку 10%</span> на следующий заказ. Количество друзей не ограничено!
+              </p>
+              <div className="bg-white rounded-2xl p-4 flex items-center gap-4 border border-[#00c9a7]/20">
+                <div className="text-4xl">🎁</div>
+                <div>
+                  <div className="font-black text-2xl text-[#00c9a7]">−10%</div>
+                  <div className="text-sm text-gray-500">за каждого приведённого друга</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Накопительная система */}
+            <div className="bg-gradient-to-br from-[#141d26]/5 to-[#141d26]/10 border border-[#141d26]/10 rounded-3xl p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#141d26] to-[#1a2a3a] rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="TrendingUp" size={26} className="text-white" />
+                </div>
+                <div>
+                  <div className="font-black text-xl">Накопительная скидка</div>
+                  <div className="text-[#0097e6] font-bold text-sm">Растёт вместе с вами</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                {[
+                  { orders: "от 5 заказов", discount: "−5%", color: "from-[#00c9a7]/20 to-[#00c9a7]/10", border: "border-[#00c9a7]/30", text: "text-[#00c9a7]", icon: "⭐" },
+                  { orders: "от 10 заказов", discount: "−10%", color: "from-[#0097e6]/20 to-[#0097e6]/10", border: "border-[#0097e6]/30", text: "text-[#0097e6]", icon: "⭐⭐" },
+                  { orders: "от 15 заказов", discount: "−15%", color: "from-[#141d26]/10 to-[#141d26]/5", border: "border-[#141d26]/20", text: "text-[#141d26]", icon: "👑" },
+                ].map(({ orders, discount, color, border, text, icon }) => (
+                  <div key={orders} className={`bg-gradient-to-r ${color} border ${border} rounded-xl px-4 py-3 flex items-center justify-between`}>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">{icon}</span>
+                      <span className="font-semibold text-sm text-[#141d26]">{orders}</span>
+                    </div>
+                    <span className={`font-black text-lg ${text}`}>{discount}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <button
+              onClick={() => setModalOpen(true)}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#00c9a7] to-[#0097e6] text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition-all hover:scale-105 shadow-xl"
+            >
+              <Icon name="Gift" size={18} />
+              Стать участником программы
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* ПОРТФОЛИО */}
-      <section id="portfolio" className="py-24 bg-white">
+      <section id="portfolio" className="py-24 bg-[#f8fafb]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="text-[#00c9a7] font-bold text-sm uppercase tracking-widest mb-3">Наши работы</div>
