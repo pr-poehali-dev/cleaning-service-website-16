@@ -145,7 +145,7 @@ export default function Index() {
             </div>
 
             <div className="flex gap-8 mt-12">
-              {[["500+","клиентов"],["8","лет опыта"],["100%","гарантия"]].map(([num, label]) => (
+              {[["500+","клиентов"],["12 000","заказов"],["100%","гарантия"]].map(([num, label]) => (
                 <div key={label}>
                   <div className="text-[#00c9a7] text-3xl font-black">{num}</div>
                   <div className="text-white/60 text-sm">{label}</div>
@@ -167,8 +167,8 @@ export default function Index() {
             <div className="relative">
               <img src={KITCHEN_IMG} alt="О нас" className="rounded-3xl w-full object-cover h-[480px]" />
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#00c9a7] to-[#0097e6] rounded-2xl p-6 text-white shadow-2xl">
-                <div className="text-4xl font-black">8</div>
-                <div className="text-sm font-medium opacity-90">лет на рынке</div>
+                <div className="text-4xl font-black">500+</div>
+                <div className="text-sm font-medium opacity-90">довольных клиентов</div>
               </div>
               <div className="absolute -top-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100">
                 <div className="flex items-center gap-3">
@@ -191,10 +191,10 @@ export default function Index() {
                 уборку
               </h2>
               <p className="text-gray-500 text-lg leading-relaxed mb-6">
-                ЧистоДом — команда из 35 сертифицированных специалистов, которые любят своё дело. Основаны в 2016 году в Москве, выполнили более 12 000 заказов.
+                ЧистоДом — команда из 35 сертифицированных специалистов, которые любят своё дело. Работаем в Брянске, выполнили более 12 000 заказов.
               </p>
               <p className="text-gray-500 leading-relaxed mb-8">
-                Используем только сертифицированные экологичные средства, безопасные для детей и домашних животных. Каждый сотрудник проходит строгую проверку и обучение.
+                Используем профессиональное оборудование: промышленные пылесосы, пароочистители и полировальные машины. Работаем только с дорогой, но проверенной химией премиум-класса — она безопасна для детей и домашних животных, но безжалостна к загрязнениям.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
@@ -328,7 +328,7 @@ export default function Index() {
             {[
               { icon: "Phone", title: "Телефон", lines: ["+7 (495) 123-45-67", "+7 (800) 555-00-11"] },
               { icon: "Mail", title: "Email", lines: ["info@chistodom.ru", "zakaz@chistodom.ru"] },
-              { icon: "MapPin", title: "Адрес", lines: ["г. Москва,", "ул. Чистая, д. 12, офис 304"] },
+              { icon: "MapPin", title: "Адрес", lines: ["г. Брянск,", "ул. Красноармейская, д. 100"] },
             ].map(({ icon, title, lines }) => (
               <div key={title} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#00c9a7] to-[#0097e6] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -367,7 +367,7 @@ export default function Index() {
             </div>
             <span className="font-black text-white">Чисто<span className="text-[#00c9a7]">Дом</span></span>
           </div>
-          <div>© 2024 ЧистоДом. Профессиональный клининг в Москве</div>
+          <div>© 2024 ЧистоДом. Профессиональный клининг в Брянске</div>
           <div>
             <span className="hover:text-white cursor-pointer transition-colors">Политика конфиденциальности</span>
           </div>
