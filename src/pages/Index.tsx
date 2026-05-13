@@ -145,7 +145,7 @@ export default function Index() {
             </div>
 
             <div className="flex gap-8 mt-12">
-              {[["500+","клиентов"],["12 000","заказов"],["100%","гарантия"]].map(([num, label]) => (
+              {[["500+","клиентов"],["100%","гарантия"]].map(([num, label]) => (
                 <div key={label}>
                   <div className="text-[#00c9a7] text-3xl font-black">{num}</div>
                   <div className="text-white/60 text-sm">{label}</div>
