@@ -133,7 +133,7 @@ export default function Index() {
             </h1>
 
             <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
-              Команда профессионалов с 8-летним опытом. Экологичные средства, гарантия результата, работаем 7 дней в неделю.
+              Профессиональная команда в Брянске. Экологичные средства, гарантия результата, работаем 7 дней в неделю.
             </p>
 
             <div className="flex flex-wrap gap-4">
