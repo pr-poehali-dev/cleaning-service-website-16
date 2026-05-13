@@ -73,7 +73,7 @@ export default function Index() {
           </div>
 
           <nav className="hidden md:flex items-center gap-1">
-            {[["about","О нас"],["services","Услуги"],["loyalty","Скидки"],["portfolio","Портфолио"],["reviews","Отзывы"],["contacts","Контакты"]].map(([id,label]) => (
+            {[["about","О нас"],["services","Услуги"],["loyalty","Скидки"],["portfolio","Портфолио"],["contacts","Контакты"]].map(([id,label]) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
@@ -99,7 +99,7 @@ export default function Index() {
 
         {menuOpen && (
           <div className="md:hidden bg-white border-t px-6 py-4 flex flex-col gap-2 text-sm font-semibold text-[#4a5568]">
-            {[["about","О нас"],["services","Услуги"],["loyalty","Скидки"],["portfolio","Портфолио"],["reviews","Отзывы"],["contacts","Контакты"]].map(([id,label]) => (
+            {[["about","О нас"],["services","Услуги"],["loyalty","Скидки"],["portfolio","Портфолио"],["contacts","Контакты"]].map(([id,label]) => (
               <button key={id} onClick={() => scrollTo(id)} className="text-left px-3 py-2 rounded-xl hover:bg-[#00c9a7]/10 hover:text-[#00c9a7] transition-colors">{label}</button>
             ))}
             <button onClick={() => { setModalOpen(true); setMenuOpen(false); }} className="mt-2 bg-gradient-to-r from-[#00c9a7] to-[#0097e6] text-white font-bold px-5 py-3 rounded-full">
